@@ -14,16 +14,11 @@ def talker():
     rospy.init_node("display", anonymous=True)
 
     print("Try connect real Mercury...")
-    port1 = rospy.get_param("~port1", "/dev/ttyTHS0")
-    port2 = rospy.get_param("~port2", "/dev/ttyACM0")
-    baud = rospy.get_param("~baud", 115200)
-    print("left arm: {}, baud: {}\n".format(port1, baud))
-    print("right arm: {}, baud: {}\n".format(port2, baud))
     try:
         # left arm
-        l = Mercury(port1, baud)
+        l = Mercury("/dev/left_arm", 115200)
         # right arm
-        r = Mercury(port2, baud)
+        r = Mercury("/dev/right_arm", 115200)
     except Exception as e:
         print(e)
         print(

@@ -12,10 +12,10 @@
       <origin xyz = "0 0 0 " rpy = " 0 0 0"/>
     </visual>
     <collision>
+      <origin xyz = "0 0 0.09 " rpy = " 0 0 0"/>
       <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/base.dae"/>
-        </geometry>
-        <origin xyz = "0 0 0 " rpy = " 0 0 0"/>
+        <cylinder length="0.14" radius="0.043"/>
+      </geometry>
     </collision>
   </link>
 
@@ -28,10 +28,10 @@
       <origin xyz = "0 0 -0.11 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/body.dae"/>
+      <origin xyz = "0 0 0.0 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.14" radius="0.033"/>
       </geometry>
-      <origin xyz = "0 0 -0.11 " rpy = " 0 0 0"/>
     </collision>
   </link>
 
@@ -44,10 +44,10 @@
       <origin xyz = "0 0 -0.1 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/head.dae"/>
+      <origin xyz = "0 0 -0.07 " rpy = " 0 0 0"/>
+       <geometry>
+        <cylinder length="0.05" radius="0.023"/>
       </geometry>
-      <origin xyz = "0 0 -0.1 " rpy = " 0 0 0"/>
     </collision>
   </link>
 
@@ -60,10 +60,10 @@
       <origin xyz = "0 0 0.0 " rpy = " 0 0 -0.6981"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/head_eye.dae"/>
-      </geometry>
       <origin xyz = "0 0 0.0 " rpy = " 0 0 -0.6981"/>
+      <geometry>
+        <cylinder length="0.08" radius="0.003"/>
+      </geometry>
     </collision>
   </link>
 
@@ -75,10 +75,10 @@
       <origin xyz = "0 0 -0.084 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint1_L.dae"/>
-      </geometry>
       <origin xyz = "0 0 -0.084 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -90,10 +90,10 @@
       <origin xyz = "0 0 0.0 " rpy = " 3.14159 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint2_L.dae"/>
-      </geometry>
       <origin xyz = "0 0 0.0 " rpy = " 3.14159 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -105,10 +105,10 @@
       <origin xyz = "0 0 0.038 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint3_L.dae"/>
-      </geometry>
       <origin xyz = "0 0 0.038 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -120,10 +120,10 @@
       <origin xyz = "0 0 0 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint4_L.dae"/>
-      </geometry>
       <origin xyz = "0 0 0 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -135,10 +135,10 @@
       <origin xyz = "0 0 -0.069 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint5_L.dae"/>
+      <origin xyz = "0 0 -0.002 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.023"/>
       </geometry>
-      <origin xyz = "0 0 -0.069 " rpy = " 0 0 0"/>
     </collision>
   </link>
 
@@ -150,10 +150,10 @@
       <origin xyz = "0 0 -0.025 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint6_L.dae"/>
+      <origin xyz = "0 0 0.0 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.023"/>
       </geometry>
-      <origin xyz = "0 0 -0.025 " rpy = " 0 0 -1.5708"/>
     </collision>
   </link>
 
@@ -165,10 +165,10 @@
       <origin xyz = "0 0 -0.002 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint7_L.dae"/>
-      </geometry>
       <origin xyz = "0 0 -0.002 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.004" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -180,10 +180,10 @@
       <origin xyz = "0 0 -0.084 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint1_R.dae"/>
-      </geometry>
       <origin xyz = "0 0 -0.084 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -195,10 +195,10 @@
       <origin xyz = "0 0 0 " rpy = " 3.14159 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint2_R.dae"/>
-      </geometry>
       <origin xyz = "0 0 0 " rpy = " 3.14159 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -210,10 +210,10 @@
       <origin xyz = "0 0 0.038 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint3_R.dae"/>
-      </geometry>
       <origin xyz = "0 0 0.038 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.03" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -225,10 +225,10 @@
       <origin xyz = "0 0 0 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint4_R.dae"/>
-      </geometry>
       <origin xyz = "0 0 0 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.035" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 
@@ -240,10 +240,10 @@
       <origin xyz = "0 0 -0.069 " rpy = " 0 0 0"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint5_R.dae"/>
+      <origin xyz = "0 0 -0.002 " rpy = " 0 0 0"/>
+      <geometry>
+        <cylinder length="0.06" radius="0.023"/>
       </geometry>
-      <origin xyz = "0 0 -0.069 " rpy = " 0 0 0"/>
     </collision>
   </link>
 
@@ -255,10 +255,10 @@
       <origin xyz = "0 0 -0.025 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint6_R.dae"/>
+      <origin xyz = "0 0 0.0 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.05" radius="0.023"/>
       </geometry>
-      <origin xyz = "0 0 -0.025 " rpy = " 0 0 -1.5708"/>
     </collision>
   </link>
 
@@ -270,10 +270,10 @@
       <origin xyz = "0 0 -0.002 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
-     <geometry>
-       <mesh filename="package://mercury_description/urdf/mercury_b1/joint7_R.dae"/>
-      </geometry>
       <origin xyz = "0 0 -0.002 " rpy = " 0 0 -1.5708"/>
+      <geometry>
+        <cylinder length="0.004" radius="0.023"/>
+      </geometry>
     </collision>
   </link>
 

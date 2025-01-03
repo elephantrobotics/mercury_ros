@@ -72,6 +72,76 @@ Visualization Manager:
           Show Axes: false
           Show Trail: false
           Value: true
+        gripper_base_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_base_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left1_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left2_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left3_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_left3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right1_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right1_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right2_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right2_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right3_L:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
+        gripper_right3_R:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+          Value: true
         link1_L:
           Alpha: 1
           Show Axes: false
@@ -181,6 +251,34 @@ Visualization Manager:
         All Enabled: false
         base:
           Value: true
+        gripper_base_L:
+          Value: true
+        gripper_base_R:
+          Value: true
+        gripper_left1_L:
+          Value: true
+        gripper_left1_R:
+          Value: true
+        gripper_left2_L:
+          Value: true
+        gripper_left2_R:
+          Value: true
+        gripper_left3_L:
+          Value: true
+        gripper_left3_R:
+          Value: true
+        gripper_right1_L:
+          Value: true
+        gripper_right1_R:
+          Value: true
+        gripper_right2_L:
+          Value: true
+        gripper_right2_R:
+          Value: true
+        gripper_right3_L:
+          Value: true
+        gripper_right3_R:
+          Value: true
         link1_L:
           Value: true
         link1_R:
@@ -231,7 +329,17 @@ Visualization Manager:
                     link5_L:
                       link6_L:
                         link7_L:
-                          {}
+                          gripper_base_L:
+                            gripper_left2_L:
+                              {}
+                            gripper_left3_L:
+                              gripper_left1_L:
+                                {}
+                            gripper_right2_L:
+                              {}
+                            gripper_right3_L:
+                              gripper_right1_L:
+                                {}
             link1_R:
               link2_R:
                 link3_R:
@@ -239,7 +347,17 @@ Visualization Manager:
                     link5_R:
                       link6_R:
                         link7_R:
-                          {}
+                          gripper_base_R:
+                            gripper_left2_R:
+                              {}
+                            gripper_left3_R:
+                              gripper_left1_R:
+                                {}
+                            gripper_right2_R:
+                              {}
+                            gripper_right3_R:
+                              gripper_right1_R:
+                                {}
             link_head:
               link_eye:
                 {}
@@ -289,9 +407,9 @@ Visualization Manager:
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.3747957646846771
+      Pitch: 0.5997957587242126
       Target Frame: <Fixed Frame>
-      Yaw: 0.002224991098046303
+      Yaw: 0.24722500145435333
     Saved: ~
 Window Geometry:
   Displays:

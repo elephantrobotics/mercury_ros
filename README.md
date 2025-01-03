@@ -125,6 +125,10 @@ rosrun mercury_a1_moveit sync_plan.py
 
 ![B1](./demo_img/mercuryB1/mercuryB1.png)
 
+[Mercury B1 Pro Gripper](./mercury_description/urdf/mercury_b1/mercury_b1_pro_gripper.urdf)
+
+![B1 gripper](./demo_img/mercuryB1/mercuryB1_gripper.png)
+
 ## Where to get help
 
 There is documentation in the [ElephantRobotics Docs](https://docs.elephantrobotics.com/docs/gitbook-en/). Please check the ROS chapter.

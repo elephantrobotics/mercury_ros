@@ -137,7 +137,7 @@
        
        <mesh filename="package://mercury_description/urdf/three_gripper/three_myhand.dae"/>
       </geometry>
-    <origin xyz = "0.0 0.026 -0.046 " rpy = " 0 0 -1.5708"/>
+    <origin xyz = "0.03 0.04 -0.046 " rpy = " 0 0 -1.5708"/>
     </visual>
     <collision>
       <origin xyz = "0.0 0 -0.002 " rpy = " 0 0 -1.5708"/>

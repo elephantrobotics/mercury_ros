@@ -81,7 +81,7 @@ def listener():
     l = Mercury("/dev/left_arm", 115200)
     r = Mercury("/dev/right_arm", 115200)
     l.set_movement_type(0) # 速度融合2 很耗时
-    l.set_movement_type(0)
+    r.set_movement_type(0)
     time.sleep(0.05)
     rospy.Subscriber("joint_states", JointState, callback)
     # spin() simply keeps python from exiting until this node is stopped

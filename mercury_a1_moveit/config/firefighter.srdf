@@ -32,31 +32,26 @@
     <virtual_joint name="vitual_joint" type="fixed" parent_frame="world" child_link="base"/>
     <!--DISABLE COLLISIONS: By default it is assumed that any link of the robot could potentially come into collision with any other link in the robot. This tag disables collision checking between a specified pair of links. -->
     <disable_collisions link1="base" link2="joint1" reason="Adjacent"/>
-    <disable_collisions link1="base" link2="joint2" reason="Always"/>
-    <disable_collisions link1="base" link2="joint3" reason="Default"/>
-    <disable_collisions link1="base" link2="joint4" reason="Always"/>
-    <disable_collisions link1="base" link2="joint5" reason="Default"/>
-    <disable_collisions link1="base" link2="joint6" reason="Always"/>
-    <disable_collisions link1="base" link2="joint7" reason="Always"/>
+    <disable_collisions link1="base" link2="joint2" reason="Never"/>
+    <disable_collisions link1="base" link2="joint3" reason="Never"/>
+    <disable_collisions link1="base" link2="joint4" reason="Never"/>
+    <disable_collisions link1="base" link2="joint5" reason="Never"/>
     <disable_collisions link1="joint1" link2="joint2" reason="Adjacent"/>
-    <disable_collisions link1="joint1" link2="joint3" reason="Default"/>
-    <disable_collisions link1="joint1" link2="joint4" reason="Always"/>
-    <disable_collisions link1="joint1" link2="joint5" reason="Default"/>
-    <disable_collisions link1="joint1" link2="joint6" reason="Always"/>
-    <disable_collisions link1="joint1" link2="joint7" reason="Always"/>
+    <disable_collisions link1="joint1" link2="joint3" reason="Never"/>
+    <disable_collisions link1="joint1" link2="joint4" reason="Never"/>
+    <disable_collisions link1="joint1" link2="joint5" reason="Never"/>
     <disable_collisions link1="joint2" link2="joint3" reason="Adjacent"/>
-    <disable_collisions link1="joint2" link2="joint4" reason="Default"/>
-    <disable_collisions link1="joint2" link2="joint5" reason="Always"/>
-    <disable_collisions link1="joint2" link2="joint6" reason="Default"/>
-    <disable_collisions link1="joint2" link2="joint7" reason="Always"/>
+    <disable_collisions link1="joint2" link2="joint4" reason="Never"/>
+    <disable_collisions link1="joint2" link2="joint5" reason="Never"/>
+    <disable_collisions link1="joint2" link2="joint6" reason="Never"/>
     <disable_collisions link1="joint3" link2="joint4" reason="Adjacent"/>
-    <disable_collisions link1="joint3" link2="joint5" reason="Default"/>
-    <disable_collisions link1="joint3" link2="joint6" reason="Always"/>
-    <disable_collisions link1="joint3" link2="joint7" reason="Always"/>
+    <disable_collisions link1="joint3" link2="joint5" reason="Never"/>
+    <disable_collisions link1="joint3" link2="joint6" reason="Never"/>
+    <disable_collisions link1="joint3" link2="joint7" reason="Never"/>
     <disable_collisions link1="joint4" link2="joint5" reason="Adjacent"/>
-    <disable_collisions link1="joint4" link2="joint6" reason="Default"/>
-    <disable_collisions link1="joint4" link2="joint7" reason="Default"/>
+    <disable_collisions link1="joint4" link2="joint6" reason="Never"/>
+    <disable_collisions link1="joint4" link2="joint7" reason="Never"/>
     <disable_collisions link1="joint5" link2="joint6" reason="Adjacent"/>
-    <disable_collisions link1="joint5" link2="joint7" reason="Always"/>
+    <disable_collisions link1="joint5" link2="joint7" reason="Never"/>
     <disable_collisions link1="joint6" link2="joint7" reason="Adjacent"/>
 </robot>

@@ -115,6 +115,20 @@ roslaunch mercury_a1_moveit mercury_a1.launch
 rosrun mercury_a1_moveit sync_plan.py
 ```
 
+## URDF Model Graph
+
+[Mercury A1](./mercury_description/urdf/mercury_a1/mercury_a1.urdf)
+
+![A1](./demo_img/mercuryA1/mercuryA1.png)
+
+[Mercury B1](./mercury_description/urdf/mercury_b1/mercury_b1.urdf)
+
+![B1](./demo_img/mercuryB1/mercuryB1.png)
+
+[Mercury B1 Pro Gripper](./mercury_description/urdf/mercury_b1/mercury_b1_pro_gripper.urdf)
+
+![B1 gripper](./demo_img/mercuryB1/mercuryB1_gripper.png)
+
 ## Where to get help
 
 There is documentation in the [ElephantRobotics Docs](https://docs.elephantrobotics.com/docs/gitbook-en/). Please check the ROS chapter.

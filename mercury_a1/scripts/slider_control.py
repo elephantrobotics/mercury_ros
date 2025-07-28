@@ -27,21 +27,26 @@ def callback(data):
         data_list.append(radians_to_angles)
         
     rospy.loginfo(rospy.get_caller_id() + "%s", data_list)
-    mc.send_angles(data_list, 25)
+    mc.send_angles(data_list, 16, _async=True)
 
 
 def listener():
     global mc
     rospy.init_node("control_slider", anonymous=True)
 
-    rospy.Subscriber("joint_states", JointState, callback)
     port = rospy.get_param("~port", "/dev/ttyAMA1")
     baud = rospy.get_param("~baud", 115200)
     print(port, baud)
     mc = Mercury(port, baud)
     time.sleep(0.05)
-    # mc.set_fresh_mode(1)
-    # time.sleep(0.05)
+    mc.set_movement_type(2)
+    time.sleep(0.05)
+    mc.set_vr_mode(1)
+    time.sleep(0.05)
+    mc.set_filter_len(3, 20)
+    time.sleep(0.05)
+    
+    rospy.Subscriber("joint_states", JointState, callback)
 
     # spin() simply keeps python from exiting until this node is stopped
     # spin()只是阻止python退出，直到该节点停止

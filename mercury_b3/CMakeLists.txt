@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-project(mercuryB3)
+project(mercury_b3)
 add_compile_options(-std=c++11)
 
 ## Find catkin and any catkin packages
@@ -20,9 +20,12 @@ catkin_package(
 ## Build talker and listener
 include_directories(include ${catkin_INCLUDE_DIRS} ${OpenCV_INCLUDE_DIRS})
 
-catkin_install_python(PROGRAMS
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
+# catkin_install_python(PROGRAMS
+#   scripts/follow_display.py
+#   scripts/slider_control.py
+
+#   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
+# )
 
 install(DIRECTORY launch DESTINATION ${CATKIN_PACKAGE_SHARE_DESTINATION}
   PATTERN "setup_assistant.launch" EXCLUDE)

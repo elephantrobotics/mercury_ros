@@ -1,0 +1,417 @@
+<?xml version="1.0"?>
+<robot  xmlns:xacro="http://www.ros.org/wiki/xacro" name="firefighter" >
+	
+<xacro:property name="width" value=".2" />
+
+  <!-- base -->
+  <link name="base">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/base.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.11 " rpy = " 0 1.5708 0"/>
+    </visual>
+    <collision>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/base.dae"/>
+        </geometry>
+        <origin xyz = "0 0 0.11 " rpy = " 0 1.5708 0"/>
+    </collision>
+  </link>
+
+  <!-- body -->
+  <link name="link_body">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/body.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.224 " rpy = " 1.5708 0 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/body.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.224 " rpy = " 1.5708 0 1.5708"/>
+    </collision>
+  </link>
+
+  <!-- screen head -->
+  <link name="link_head">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/head.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.001 " rpy = " 1.5708 0 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/head.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.001 " rpy = " 1.5708 0 1.5708"/>
+    </collision>
+  </link>
+
+  <!-- camera -->
+  <link name="link_eye">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/head_eye.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.0 " rpy = " 0 1.5708 2.7925"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/head_eye.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.0 " rpy = " 0 1.5708 2.7925"/>
+    </collision>
+  </link>
+
+  <link name="link1_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint1_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.001 " rpy = " 1.5708 0 0"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint1_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.001 " rpy = " 1.5708 0 0"/>
+    </collision>
+  </link>
+
+  <link name="link2_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint2_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0.0 0.0 " rpy = " 3.14159 0 -1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint2_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0.0 0.0 " rpy = " 3.14159 0 -1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link3_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint3_L.dae"/>
+      </geometry>
+      <origin xyz = "0.0 -0.00 0.0 " rpy = " 1.5708 -1.5708 0"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint3_L.dae"/>
+      </geometry>
+      <origin xyz = "0.0 -0.00 0.0 " rpy = " 1.5708 -1.5708 0"/>
+    </collision>
+  </link>
+
+  <link name="link4_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint4_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0.00 0.00 " rpy = " 0 3.14159 -1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint4_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0.00 0.00 " rpy = " 0 3.14159 -1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link5_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint5_L.dae"/>
+      </geometry>
+      <origin xyz = "0.00 0 -0.004 " rpy = "0 -1.5708 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint5_L.dae"/>
+      </geometry>
+      <origin xyz = "0.00 0 -0.004 " rpy = "0 -1.5708 1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link6_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint6_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.00 " rpy = " 0 0 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint6_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.00 " rpy = " 0 0 1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link7_L">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint7_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.002 " rpy = " -1.5708 0 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint7_L.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.002 " rpy = " -1.5708 0 1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link1_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint1_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.001 " rpy = " -1.5708 0 0"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint1_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.001 " rpy = " -1.5708 0 0"/>
+    </collision>
+  </link>
+
+ <link name="link2_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint2_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.0 " rpy = " 3.14159 0 -1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint2_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.0 " rpy = " 3.14159 0 -1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link3_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint3_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 1.5708 -1.5708 0"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint3_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 1.5708 -1.5708 0"/>
+    </collision>
+  </link>
+
+  <link name="link4_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint4_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 0 3.14159 -1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint4_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 0 3.14159 -1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link5_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint5_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.004 " rpy = "0 -1.5708 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint5_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 -0.004 " rpy = "0 -1.5708 1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link6_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint6_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 0 0 1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint6_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0 " rpy = " 0 0 1.5708"/>
+    </collision>
+  </link>
+
+  <link name="link7_R">
+    <visual>
+      <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint7_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.002 " rpy = " -1.5708 0 -1.5708"/>
+    </visual>
+    <collision>
+     <geometry>
+       <mesh filename="package://mercury_description/urdf/mercury_b3/joint7_R.dae"/>
+      </geometry>
+      <origin xyz = "0 0 0.002 " rpy = " -1.5708 0 -1.5708"/>
+    </collision>
+  </link>
+
+  <joint name="joint1_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link_body"/>
+    <child link="link1_L"/>
+    <origin xyz= " 0.025 0.155 0.156 " rpy = "-1.5708 0 -0.2094"/>  
+  </joint>
+
+  <joint name="joint2_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-0.8726" upper = "2.0943" velocity = "0"/>
+    <parent link="link1_L"/>
+    <child link="link2_L"/>
+    <origin xyz= " 0 -0.001 0.088  " rpy = "-1.5708 0.0 0"/>  
+  </joint>
+
+  <joint name="joint3_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link2_L"/>
+    <child link="link3_L"/>
+    <origin xyz= " 0.0 -0.192 0.00  " rpy = "1.5708 0 0"/>  
+  </joint>
+
+  <joint name="joint4_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "0.01745" velocity = "0"/>
+    <parent link="link3_L"/>
+    <child link="link4_L"/>
+    <origin xyz= " 0.037 0 0.064" rpy = "-1.5708 0 3.14159"/>  
+  </joint>
+
+  <joint name="joint5_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link4_L"/>
+    <child link="link5_L"/>
+    <origin xyz= " 0.036 -0.063 0" rpy = "1.5708 3.14159 0"/>  
+  </joint>
+
+  <joint name="joint6_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-1.3089" upper = "4.4505" velocity = "0"/>
+    <parent link="link5_L"/>
+    <child link="link6_L"/>
+    <origin xyz= " 0 0.035 0.187" rpy = "1.5708 0 0"/>  
+  </joint>
+
+  <joint name="joint7_L" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link6_L"/>
+    <child link="link7_L"/>
+    <origin xyz= " 0.038 0.05 0.035" rpy = "0 1.5708 0"/>  
+  </joint>
+
+  <joint name="joint1_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link_body"/>
+    <child link="link1_R"/>
+    <origin xyz= " 0.025 -0.155 0.156 " rpy = "-1.5708 0 0.2094"/>  
+  </joint>
+
+  <joint name="joint2_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-0.8726" upper = "2.0943" velocity = "0"/>
+    <parent link="link1_R"/>
+    <child link="link2_R"/>
+    <origin xyz= " 0 -0.001 -0.088  " rpy = "1.5708 0 0"/>  
+  </joint>
+
+  <joint name="joint3_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link2_R"/>
+    <child link="link3_R"/>
+    <origin xyz= " 0.0 -0.192 0.00   " rpy = "1.5708 0 0"/>  
+  </joint>
+
+  <joint name="joint4_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "0.01745" velocity = "0"/>
+    <parent link="link3_R"/>
+    <child link="link4_R"/>
+    <origin xyz= " 0.037 0 0.064" rpy = "-1.5708 0 3.14159"/>  
+  </joint>
+
+  <joint name="joint5_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link4_R"/>
+    <child link="link5_R"/>
+    <origin xyz= " 0.036 -0.063 0" rpy = "1.5708 3.14159 0"/>  
+  </joint>
+
+  <joint name="joint6_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-1.3089" upper = "4.4505" velocity = "0"/>
+    <parent link="link5_R"/>
+    <child link="link6_R"/>
+    <origin xyz= "0 0.035 0.187" rpy = "1.5708 0 0"/>  
+  </joint>
+
+  <joint name="joint7_R" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.8797" upper = "2.8797" velocity = "0"/>
+    <parent link="link6_R"/>
+    <child link="link7_R"/>
+    <origin xyz= " 0.038 0.05 0.035" rpy = "0 1.5708 0"/>  
+  </joint>
+
+
+  <joint name="eye" type="revolute">
+    <axis xyz=" 0 0 -1"/>
+    <limit effort = "1000.0" lower = "-0.9599" upper = "0" velocity = "0"/>
+    <parent link="link_head"/>
+    <child link="link_eye"/>
+    <origin xyz= " 0.042 0 0.028   " rpy = "-1.5708 0 0"/>  
+  </joint>
+
+  <joint name="head" type="revolute">
+    <axis xyz=" 0 0 -1"/>
+    <limit effort = "1000.0" lower = "-1.2217" upper = "4.2760" velocity = "0"/>
+    <parent link="link_body"/>
+    <child link="link_head"/>
+    <origin xyz= " 0 0 0.2   " rpy = "0 0 0"/>  
+  </joint>
+
+  <joint name="body" type="revolute">
+    <axis xyz=" 0 0 1"/>
+    <limit effort = "1000.0" lower = "-2.7925" upper = "2.7925" velocity = "0"/>
+    <parent link="base"/>
+    <child link="link_body"/>
+    <origin xyz= " 0 0 0.231   " rpy = "0 0 0"/>  
+  </joint>
+
+</robot>

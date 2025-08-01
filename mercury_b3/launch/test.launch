@@ -1,6 +1,6 @@
 <launch>
 	<arg name="model" default="$(find mercury_description)/urdf/mercury_b3/mercury_b3.urdf"/>
-	<arg name="rvizconfig" default="$(find mercury_b1)/config/mercury_b3.rviz" />
+	<arg name="rvizconfig" default="$(find mercury_b3)/config/mercury_b3.rviz" />
 	<arg name="gui" default="true" />
 
 	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />

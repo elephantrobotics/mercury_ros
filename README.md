@@ -6,11 +6,11 @@
 [![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/chinese.svg)](https://docs.elephantrobotics.com/docs/gitbook/12-ApplicationBaseROS/)
 [![jaywcjlove/sb](https://jaywcjlove.github.io/sb/lang/english.svg)](https://docs.elephantrobotics.com/docs/gitbook-en/12-ApplicationBaseROS/)
 
-[中文文档](https://docs.elephantrobotics.com/docs/gitbook/12-ApplicationBaseROS/) | [English Documentation](https://docs.elephantrobotics.com/docs/gitbook-en/12-ApplicationBaseROS/)
+[中文文档](https://docs.elephantrobotics.com/docs/Mercury_A1_cn/11-ApplicationBaseROS/11.1-ROS1/) | [English Documentation](https://docs.elephantrobotics.com/docs/Mercury_A1_en/11-ApplicationBaseROS/11.1-ROS1/)
 
 Control or simulate Mercury series robots in ROS.
 
-![Demo](./demo_img/Screenshot-1.png)
+![Demo](./demo_img/mercuryA1/A1-ROS.png)
 
 **Notes**:
 

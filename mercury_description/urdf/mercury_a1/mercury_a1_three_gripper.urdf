@@ -109,9 +109,9 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mercury_description/urdf/mercury_a1/joint6.dae"/>
+       <mesh filename="package://mercury_description/urdf/mercury_a1/J6-W.dae"/>
       </geometry>
-    <origin xyz = "0.0 0 0.0 " rpy = " 0 0 -1.5708"/>
+    <origin xyz = "-0.001 0 0.0295 " rpy = " 1.5708 0 1.5708"/>
     </visual>
     <collision>
       <origin xyz = "0.0 0 0.0 " rpy = " 0 0 -1.5708"/>
@@ -125,9 +125,9 @@
     <visual>
       <geometry>
        
-       <mesh filename="package://mercury_description/urdf/mercury_a1/joint7.dae"/>
+       <mesh filename="package://mercury_description/urdf/mercury_a1/J7-W.dae"/>
       </geometry>
-    <origin xyz = "0.0 0 -0.002 " rpy = " 0 0 -1.5708"/>
+    <origin xyz = "0.0 0 -0.002 " rpy = " 0 -1.5708 -1.5708"/>
     </visual>
     <collision>
       <origin xyz = "0.0 0 -0.002 " rpy = " 0 0 -1.5708"/>
@@ -213,7 +213,7 @@
     <limit effort = "1000.0" lower = "-3.14" upper = "3.14" velocity = "0"/>
     <parent link="joint6"/>
     <child link="joint7"/>
-    <origin xyz= "0.038 -0.045 0.025" rpy = "1.5708 0 0"/>  
+    <origin xyz= "0.042 -0.043 0.029" rpy = "1.5708 0 0"/>  
   </joint>
 
   <joint name="gripper_to_joint7" type="fixed">

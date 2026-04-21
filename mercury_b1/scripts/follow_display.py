@@ -5,7 +5,6 @@ import traceback
 import rospy
 from sensor_msgs.msg import JointState
 from std_msgs.msg import Header
-from visualization_msgs.msg import Marker
 
 from pymycobot.mercury import Mercury
 
@@ -19,6 +18,12 @@ def talker():
         l = Mercury("/dev/left_arm", 115200)
         # right arm
         r = Mercury("/dev/right_arm", 115200)
+        if l.is_power_on() != 1:
+            l.power_on()
+        if r.is_power_on() != 1:
+            r.power_on()
+        r.set_movement_type(1)
+        l.set_movement_type(1)
     except Exception as e:
         print(e)
         print(
@@ -36,7 +41,6 @@ def talker():
     print("Rlease all servos over.\n")
 
     pub = rospy.Publisher("joint_states", JointState, queue_size=10)
-    pub_marker = rospy.Publisher("visualization_marker", Marker, queue_size=10)
     rate = rospy.Rate(30)  # 30hz
 
     # pub joint state
@@ -75,15 +79,35 @@ def talker():
             eye_angle = r.get_angle(11)
             head_angle = r.get_angle(12)
             body_angle = r.get_angle(13)
+   
+            if left_angles is None or right_angles is None:
+                # rospy.logwarn("Received None from get_angles, skip frame")
+                rate.sleep()
+                continue
+
+            if len(left_angles) != 7 or len(right_angles) != 7:
+                # rospy.logwarn("Invalid joint length, skip frame")
+                rate.sleep()
+                continue
+
+            if None in left_angles or None in right_angles:
+                # rospy.logwarn("Joint contains None, skip frame")
+                rate.sleep()
+                continue
+
+            if None in [eye_angle, head_angle, body_angle]:
+                # rospy.logwarn("Middle joint read failed, skip frame")
+                rate.sleep()
+                continue         
             
             left_angles[5] -= 90
             right_angles[5] -= 90
             
-            print('left: {}'.format(left_angles))
-            print('right: {}'.format(right_angles))
-            print('body: {}'.format(body_angle))
-            print('head: {}'.format(head_angle))
-            print('camera: {}'.format(eye_angle))
+            # print('left: {}'.format(left_angles))
+            # print('right: {}'.format(right_angles))
+            # print('body: {}'.format(body_angle))
+            # print('head: {}'.format(head_angle))
+            # print('camera: {}'.format(eye_angle))
             
             all_angles = left_angles + right_angles + [body_angle] + [head_angle] + [eye_angle]
             data_list = []

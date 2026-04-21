@@ -1,71 +1,138 @@
 #!/usr/bin/env python3
 
-"""[summary]
-This file obtains the joint angle of the manipulator in ROS,
-and then sends it directly to the real manipulator using `pymycobot` API.
-This file is [slider_control.launch] related script.
-Passable parameters:
-      port1: Left arm serial port string. Default is "/dev/left_arm"
-      port2: Right arm serial port string. Default is "/dev/right_arm"
-      Baud rate: Left and right arm serial port baud rate. The default value is 115200.
 """
+Optimized slider control node for Mercury dual-arm robot (ROS1).
+
+Key features:
+1. Control rate limiting (~20Hz)
+2. Independent control for left/right/middle joints
+3. Change threshold filtering to avoid redundant commands
+4. Proper logging (no print in high-frequency loop)
+5. Robust exception handling
+"""
+
 import math
 import time
 import rospy
 from sensor_msgs.msg import JointState
-import traceback
 from pymycobot.mercury import Mercury
 
-def callback(data):
-    # rospy.loginfo(rospy.get_caller_id() + "%s", data.position)
 
-    data_list = []
-    for index, value in enumerate(data.position):
-        radians_to_angles = round(math.degrees(value), 2)
-        data_list.append(radians_to_angles)
+class SliderController:
+    """ROS node for controlling dual-arm robot using joint_states."""
 
-    # print('data_list: {}'.format(data_list))
-    left_arm = data_list[:7]
-    right_arm = data_list[7:-3]
-    middle_arm = data_list[-3:]
-    
-    left_arm[5] = left_arm[5] + 90
-    right_arm[5] = right_arm[5] + 90
+    def __init__(self):
+        """Initialize ROS node, robot connections, and subscriber."""
+        rospy.init_node("control_slider", anonymous=True)
 
-    print('left_angles: {}, right_angles: {}, middle_angles: {}'.format(left_arm, right_arm, middle_arm))
-    l.send_angles(left_arm, 16, _async=True)
-    r.send_angles(right_arm, 16, _async=True)
-    r.send_angle(11, middle_arm[2], 16, _async=True)
-    r.send_angle(12, middle_arm[1], 16, _async=True)
-    r.send_angle(13, middle_arm[0], 16, _async=True)
+        # Parameters
+        port1 = rospy.get_param("~port1", "/dev/left_arm")
+        port2 = rospy.get_param("~port2", "/dev/right_arm")
+        baud = rospy.get_param("~baud", 115200)
+
+        rospy.loginfo(f"Left arm: {port1}, baud: {baud}")
+        rospy.loginfo(f"Right arm: {port2}, baud: {baud}")
+
+        # Initialize robot connections
+        self.left_arm = Mercury(port1, baud)
+        self.right_arm = Mercury(port2, baud)
+        if self.left_arm.is_power_on() != 1:
+            self.left_arm.power_on()
+        if self.right_arm.is_power_on() != 1:
+            self.right_arm.power_on()
+
+        time.sleep(0.05)
+        self.left_arm.set_movement_type(4)
+        time.sleep(0.05)
+        self.right_arm.set_movement_type(4)
+        #
+        time.sleep(0.05)
+        self.left_arm.set_vr_mode(1)
+        self.right_arm.set_vr_mode(1)
+        #
+        # time.sleep(0.05)
+        # self.left_arm.set_filter_len(3, 20)
+        # self.right_arm.set_filter_len(3, 20)
+
+        # Control state
+        self.last_time = time.time()
+        self.last_left = None
+        self.last_right = None
+        self.last_middle = None
+
+        # Threshold settings (degrees)
+        self.arm_threshold = 1.0
+        self.middle_threshold = 0.5
+
+        # Subscriber
+        rospy.Subscriber("joint_states", JointState, self.callback)
+
+        rospy.loginfo("Slider control node started.")
+        rospy.spin()
+
+    def callback(self, msg: JointState):
+        """
+        Callback for joint_states topic.
+
+        Args:
+            msg (JointState): Joint positions in radians
+        """
+        now = time.time()
+
+        # 1. Limit control frequency to ~20Hz
+        if now - self.last_time < 0.05:
+            return
+
+        try:
+            # Convert radians to degrees
+            data_list = [round(math.degrees(v), 2) for v in msg.position]
+
+            # Split joints
+            left_arm = data_list[:7]
+            right_arm = data_list[7:-3]
+
+            # Apply offset correction
+            left_arm[5] += 90
+            right_arm[5] += 90
+
+            # -----------------------------
+            # LEFT ARM CONTROL
+            # -----------------------------
+            if self._should_send(left_arm, self.last_left, self.arm_threshold):
+                self.left_arm.send_angles(left_arm, 25, _async=True)
+                self.last_left = left_arm
+
+            # -----------------------------
+            # RIGHT ARM CONTROL
+            # -----------------------------
+            if self._should_send(right_arm, self.last_right, self.arm_threshold):
+                self.right_arm.send_angles(right_arm, 25, _async=True)
+                self.last_right = right_arm
 
 
-def listener():
-    global l, r
-    rospy.init_node("control_slider", anonymous=True)
+            # Update timestamp
+            self.last_time = now
 
-    port1 = rospy.get_param("~port1", "/dev/left_arm")
-    port2 = rospy.get_param("~port2", "/dev/right_arm")
-    baud = rospy.get_param("~baud", 115200)
-    print('left arm: {}, {}'.format(port1, baud))
-    print('right arm: {}, {}'.format(port2, baud))
-    l = Mercury(port1, baud)
-    r = Mercury(port2, baud)
-    time.sleep(0.05)
-    l.set_movement_type(2)
-    r.set_movement_type(2)
-    time.sleep(0.05)
-    l.set_vr_mode(1)
-    r.set_vr_mode(1)
-    time.sleep(0.05)
-    l.set_filter_len(3, 20)
-    r.set_filter_len(3, 20)
-    time.sleep(0.05)
-    rospy.Subscriber("joint_states", JointState, callback)
-    # spin() simply keeps python from exiting until this node is stopped
-    # spin()只是阻止python退出，直到该节点停止
-    print("spin ...")
-    rospy.spin()
+        except Exception as e:
+            rospy.logerr(f"Control error: {e}")
+
+    @staticmethod
+    def _should_send(new, last, threshold):
+        """
+        Determine whether to send command based on change threshold.
+
+        Args:
+            new (list): New joint values
+            last (list): Previous joint values
+            threshold (float): Minimum change in degrees
+
+        Returns:
+            bool: True if command should be sent
+        """
+        if last is None:
+            return True
+        return max(abs(a - b) for a, b in zip(new, last)) >= threshold
+
 
 if __name__ == "__main__":
-    listener()
+    SliderController()

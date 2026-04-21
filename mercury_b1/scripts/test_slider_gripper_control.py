@@ -36,17 +36,14 @@ def callback(data):
     for index, value in enumerate(data.position):
         data_list.append(round(value, 3))
         
-    # print('data_list: {}'.format(data_list))
+    print('data_list: {}'.format(data_list))
 
     left_angles_list = [round(math.degrees(radian), 2) for radian in data_list[:7]]
+    right_angles_list = [round(math.degrees(radian), 2) for radian in data_list[7:14]]
+    middle_angles_list = [round(math.degrees(radian), 2) for radian in data_list[14:17]]
+    left_arm_gripper_value = map_angle_to_range(data_list[17])
+    right_arm_gripper_value = map_angle_to_range(data_list[23])
     
-    left_arm_gripper_value = map_angle_to_range(data_list[7])
-
-    right_angles_list = [round(math.degrees(radian), 2) for radian in data_list[13:20]]
-    
-    right_arm_gripper_value = map_angle_to_range(data_list[20])
-    
-    middle_angles_list = [round(math.degrees(radian), 2) for radian in data_list[-3:]]
     # 为左臂和右臂的 J6 关节角度加上偏移量 90°
     left_angles_list[5] = left_angles_list[5] + 90
     right_angles_list[5] = right_angles_list[5] + 90
@@ -66,13 +63,7 @@ def callback(data):
         rospy.logerr(f"Failed to send angles: {e}")
 
 def map_angle_to_range(angle):
-        input_min = -0.7
-        input_max = 0.3
-        output_min = 0
-        output_max = 100
-
-        mapped_value = int((angle - input_min) * (output_max - output_min) / (input_max - input_min) + output_min)
-        return mapped_value
+    return int(((angle + 1.11) / 1.11) * 100)
 
 def listener():
     global l, r
@@ -80,8 +71,8 @@ def listener():
 
     l = Mercury("/dev/left_arm", 115200)
     r = Mercury("/dev/right_arm", 115200)
-    l.set_movement_type(0) # 速度融合2 很耗时
-    r.set_movement_type(0)
+    l.set_movement_type(1) # 速度融合2 很耗时
+    r.set_movement_type(1)
     time.sleep(0.05)
     rospy.Subscriber("joint_states", JointState, callback)
     # spin() simply keeps python from exiting until this node is stopped

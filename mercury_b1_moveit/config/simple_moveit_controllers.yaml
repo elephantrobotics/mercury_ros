@@ -4,30 +4,22 @@ controller_list:
     type: FollowJointTrajectory
     default: True
     joints:
-      - joint1_L
-      - joint2_L
-      - joint3_L
-      - joint4_L
-      - joint5_L
-      - joint6_L
-      - joint7_L
+      - L1_joint
+      - L2_joint
+      - L3_joint
+      - L4_joint
+      - L5_joint
+      - L6_joint
+      - L7_joint
   - name: right_arm_controller
     action_ns: follow_joint_trajectory
     type: FollowJointTrajectory
     default: True
     joints:
-      - joint1_R
-      - joint2_R
-      - joint3_R
-      - joint4_R
-      - joint5_R
-      - joint6_R
-      - joint7_R
-  - name: body_arm_controller
-    action_ns: follow_joint_trajectory
-    type: FollowJointTrajectory
-    default: True
-    joints:
-      - body
-      - head
-      - eye
+      - R1_joint
+      - R2_joint
+      - R3_joint
+      - R4_joint
+      - R5_joint
+      - R6_joint
+      - R7_joint

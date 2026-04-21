@@ -1,45 +1,45 @@
 left_arm_controller:
   type: effort_controllers/JointTrajectoryController
   joints:
-    - joint1_L
-    - joint2_L
-    - joint3_L
-    - joint4_L
-    - joint5_L
-    - joint6_L
-    - joint7_L
+    - L1_joint
+    - L2_joint
+    - L3_joint
+    - L4_joint
+    - L5_joint
+    - L6_joint
+    - L7_joint
   gains:
-    joint1_L:
+    L1_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint2_L:
+    L2_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint3_L:
+    L3_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint4_L:
+    L4_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint5_L:
+    L5_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint6_L:
+    L6_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint7_L:
+    L7_joint:
       p: 100
       d: 1
       i: 1
@@ -47,67 +47,45 @@ left_arm_controller:
 right_arm_controller:
   type: effort_controllers/JointTrajectoryController
   joints:
-    - joint1_R
-    - joint2_R
-    - joint3_R
-    - joint4_R
-    - joint5_R
-    - joint6_R
-    - joint7_R
+    - R1_joint
+    - R2_joint
+    - R3_joint
+    - R4_joint
+    - R5_joint
+    - R6_joint
+    - R7_joint
   gains:
-    joint1_R:
+    R1_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint2_R:
+    R2_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint3_R:
+    R3_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint4_R:
+    R4_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint5_R:
+    R5_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint6_R:
+    R6_joint:
       p: 100
       d: 1
       i: 1
       i_clamp: 1
-    joint7_R:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-body_arm_controller:
-  type: effort_controllers/JointTrajectoryController
-  joints:
-    - body
-    - head
-    - eye
-  gains:
-    body:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-    head:
-      p: 100
-      d: 1
-      i: 1
-      i_clamp: 1
-    eye:
+    R7_joint:
       p: 100
       d: 1
       i: 1

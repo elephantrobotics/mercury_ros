@@ -5,7 +5,7 @@
   <arg name="paused" default="false" doc="Start Gazebo paused"/>
   <arg name="world_name" default="worlds/empty.world" doc="Gazebo world file"/>
   <arg name="world_pose" default="-x 0 -y 0 -z 0 -R 0 -P 0 -Y 0" doc="Pose to spawn the robot at"/>
-  <arg name="initial_joint_positions" default=" -J body 0 -J eye 0 -J head 0 -J joint1_L 0 -J joint1_R 0 -J joint2_L 0 -J joint2_R 0 -J joint3_L 0 -J joint3_R 0 -J joint4_L 0 -J joint4_R 0 -J joint5_L 0 -J joint5_R 0 -J joint6_L 0 -J joint6_R 0 -J joint7_L 0 -J joint7_R 0" doc="Initial joint configuration of the robot"/>
+  <arg name="initial_joint_positions" default=" -J L1_joint 0 -J L2_joint 0 -J L3_joint 0 -J L4_joint 0 -J L5_joint 0 -J L6_joint 0 -J L7_joint 0 -J R1_joint 0 -J R2_joint 0 -J R3_joint 0 -J R4_joint 0 -J R5_joint 0 -J R6_joint 0 -J R7_joint 0" doc="Initial joint configuration of the robot"/>
 
   <!-- Start Gazebo paused to allow the controllers to pickup the initial pose -->
   <include file="$(find gazebo_ros)/launch/empty_world.launch" pass_all_args="true">
@@ -13,7 +13,7 @@
   </include>
 
   <!-- Set the robot urdf on the parameter server -->
-  <param name="robot_description" textfile="$(find mercury_b1_moveit)/config/gazebo_firefighter.urdf" />
+  <param name="robot_description" textfile="$(find mercury_b1_moveit)/config/gazebo_mercury_b1.urdf" />
 
   <!-- Unpause the simulation after loading the robot model -->
   <arg name="unpause" value="$(eval '' if arg('paused') else '-unpause')" />

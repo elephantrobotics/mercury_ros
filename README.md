@@ -125,7 +125,7 @@ rosrun mercury_a1_moveit sync_plan.py
 
 ![B1](./demo_img/mercuryB1/mercuryB1.png)
 
-[Mercury B1 Pro Gripper](./mercury_description/urdf/mercury_b1/mercury_b1_pro_gripper.urdf)
+[Mercury B1 Pro Gripper](./mercury_description/urdf/mercury_b1/mercury_b1_adaptive_gripper.urdf)
 
 ![B1 gripper](./demo_img/mercuryB1/mercuryB1_gripper.png)
 

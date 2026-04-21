@@ -194,7 +194,7 @@ left_arm:
     - AITstar
     - ABITstar
     - BITstar
-  projection_evaluator: joints(joint1_L,joint2_L)
+  projection_evaluator: joints(L1_joint,L2_joint)
   longest_valid_segment_fraction: 0.005
 right_arm:
   default_planner_config: RRTConnect
@@ -226,37 +226,5 @@ right_arm:
     - AITstar
     - ABITstar
     - BITstar
-  projection_evaluator: joints(joint1_R,joint2_R)
-  longest_valid_segment_fraction: 0.005
-body_arm:
-  default_planner_config: RRTConnect
-  planner_configs:
-    - AnytimePathShortening
-    - SBL
-    - EST
-    - LBKPIECE
-    - BKPIECE
-    - KPIECE
-    - RRT
-    - RRTConnect
-    - RRTstar
-    - TRRT
-    - PRM
-    - PRMstar
-    - FMT
-    - BFMT
-    - PDST
-    - STRIDE
-    - BiTRRT
-    - LBTRRT
-    - BiEST
-    - ProjEST
-    - LazyPRM
-    - LazyPRMstar
-    - SPARS
-    - SPARStwo
-    - AITstar
-    - ABITstar
-    - BITstar
-  projection_evaluator: joints(body,head)
+  projection_evaluator: joints(R1_joint,R2_joint)
   longest_valid_segment_fraction: 0.005

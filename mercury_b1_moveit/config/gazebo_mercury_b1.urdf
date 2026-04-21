@@ -1,0 +1,702 @@
+<?xml version="2.0" encoding="utf-8" ?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot name="mercury_b1">
+    <link name="dummy_link" />
+    <joint name="dummy" type="fixed">
+        <parent link="dummy_link" />
+        <child link="base_link" />
+    </joint>
+    <link name="L1_Link">
+        <inertial>
+            <origin xyz="-0.0120949509782989 -0.00129272911532426 -0.0531719066804116" rpy="0 0 0" />
+            <mass value="0.333175155332311" />
+            <inertia ixx="0.0004442800112844" ixy="-1.23845725154531E-05" ixz="-8.48209942461665E-05" iyy="0.000451119620470362" iyz="-2.64710517571888E-05" izz="0.000201977217340538" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L1_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L1_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L1_joint" type="revolute">
+        <origin xyz="-0.118497394816875 0.0182738890202244 0.188499999999995" rpy="1.57079632679493 -1.3613568165556 1.36135681655573" />
+        <parent link="body_Link" />
+        <child link="L1_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L2_Link">
+        <inertial>
+            <origin xyz="0.0597657730522403 -0.00190171728244728 -0.00060490733301849" rpy="0 0 0" />
+            <mass value="0.361775197812871" />
+            <inertia ixx="0.000202270755821269" ixy="2.84692249006529E-05" ixz="0.00014617016769357" iyy="0.000785462597579428" iyz="-1.76401498326188E-06" izz="0.000766320450951741" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L2_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L2_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L2_joint" type="revolute">
+        <origin xyz="0.0070916 0.0015074 -0.08215" rpy="1.5708 1.5271 1.7802" />
+        <parent link="L1_Link" />
+        <child link="L2_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-0.87" upper="2.09" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L3_Link">
+        <inertial>
+            <origin xyz="0.00718717144140676 0.00715609777214826 0.0498312879037946" rpy="0 0 0" />
+            <mass value="0.28631136916664" />
+            <inertia ixx="0.000347663044252214" ixy="-3.05969450888489E-05" ixz="-7.48531278641318E-05" iyy="0.000383836017207333" iyz="-6.07200338666963E-05" izz="0.000202222358931965" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L3_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L3_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L3_joint" type="revolute">
+        <origin xyz="0.119535751998164 -0.00522678221895016 -0.00824999999999831" rpy="-1.57079632679491 -0.161317342007266 -1.61449416830792" />
+        <parent link="L2_Link" />
+        <child link="L3_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L4_Link">
+        <inertial>
+            <origin xyz="0.0338944128988164 -0.0145899369560826 0.00230446960967212" rpy="0 0 0" />
+            <mass value="0.242339322350328" />
+            <inertia ixx="0.000191719315934141" ixy="9.81497767076158E-05" ixz="7.72239383580917E-05" iyy="0.000299339857077313" iyz="-3.81474591844285E-05" izz="0.000356032145356093" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L4_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L4_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L4_joint" type="revolute">
+        <origin xyz="0.0302814729663858 -0.00241762176226584 0.0818500000000202" rpy="-1.5707963267949 -0.619422014804291 -2.98027531158253" />
+        <parent link="L3_Link" />
+        <child link="L4_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="0.0174" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L5_Link">
+        <inertial>
+            <origin xyz="0.0100190195101572 -0.0119827523436702 -0.0505922255102315" rpy="0 0 0" />
+            <mass value="0.155941224668293" />
+            <inertia ixx="0.000315328855844126" ixy="1.7392802770256E-05" ixz="5.63087945664425E-05" iyy="0.000309285777402521" iyz="-6.77655755667421E-05" izz="8.97379838933838E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L5_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L5_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L5_joint" type="revolute">
+        <origin xyz="0.0701567904374146 -0.0475789413030669 -0.00825000000000015" rpy="-1.5707963267949 -0.69071648231178 0.619422013996731" />
+        <parent link="L4_Link" />
+        <child link="L5_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L6_Link">
+        <inertial>
+            <origin xyz="-0.028135568955971 0.011988129881167 0.0269120806655726" rpy="0 0 0" />
+            <mass value="0.227232628149454" />
+            <inertia ixx="0.000164258174507782" ixy="1.28977190246103E-05" ixz="9.06896797631656E-06" iyy="0.000174364216612092" iyz="-3.77862160696737E-06" izz="0.00022081482915595" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L6_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L6_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L6_joint" type="revolute">
+        <origin xyz="0.0183609223561629 -0.0222141605790311 -0.12603" rpy="-1.5707963267949 -1.26273791559162 0.69071648231178" />
+        <parent link="L5_Link" />
+        <child link="L6_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="L7_Link">
+        <inertial>
+            <origin xyz="-4.68520294214514E-05 -1.21653613064376E-05 0.0071631839975768" rpy="0 0 0" />
+            <mass value="0.0300324441314696" />
+            <inertia ixx="5.70594360238451E-06" ixy="2.06804756060326E-08" ixz="5.45607479715901E-09" iyy="5.6315614644682E-06" iyz="1.41685561490465E-09" izz="1.02708087488486E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L7_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/L7_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="L7_joint" type="revolute">
+        <origin xyz="-0.0506977777847214 -0.0208039254363527 0.0283216918889004" rpy="1.5707963267949 0.253768150357354 -0.308058411203275" />
+        <parent link="L6_Link" />
+        <child link="L7_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R1_Link">
+        <inertial>
+            <origin xyz="-0.003738491142875 0.0115751015156872 0.0531719146393969" rpy="0 0 0" />
+            <mass value="0.333174849091845" />
+            <inertia ixx="0.000459191162994398" ixy="-5.74546500433347E-06" ixz="1.03173423156344E-05" iyy="0.000436207613623457" iyz="-8.8254421979141E-05" izz="0.000201977028861084" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R1_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R1_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R1_joint" type="revolute">
+        <origin xyz="0.118497394817623 0.0182738890154283 0.188499999999997" rpy="1.57079632679489 0.209439510239314 1.78023583699358" />
+        <parent link="body_Link" />
+        <child link="R1_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R2_Link">
+        <inertial>
+            <origin xyz="0.05845872904098 0.0125780892399755 -0.000605230096515363" rpy="0 0 0" />
+            <mass value="0.36177164559734" />
+            <inertia ixx="0.000222893159461755" ixy="-0.000111414672598817" ixz="0.000142270366115867" iyy="0.000764821279307683" iyz="3.35580641772101E-05" izz="0.000766308800462405" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R2_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.698039215686274 0.698039215686274 0.698039215686274 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R2_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R2_joint" type="revolute">
+        <origin xyz="0.00161131160777349 -0.00758062716891239 0.0821499697613877" rpy="1.57079632679489 -1.37076011220364 0.209439510240489" />
+        <parent link="R1_Link" />
+        <child link="R2_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-0.87" upper="2.09" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R3_Link">
+        <inertial>
+            <origin xyz="-0.00824377698418517 -0.00590887878185786 0.0498310943779736" rpy="0 0 0" />
+            <mass value="0.286312926844065" />
+            <inertia ixx="0.000338895762686665" ixy="-2.32832057950768E-05" ixz="8.36339203295769E-05" iyy="0.000392602375419539" iyz="4.79081924719824E-05" izz="0.000202222827905262" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R3_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R3_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R3_joint" type="revolute">
+        <origin xyz="0.117264075564476 0.0237750256749663 -0.0082500000000002" rpy="1.5707963267949 0 1.77083254134537" />
+        <parent link="R2_Link" />
+        <child link="R3_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R4_Link">
+        <inertial>
+            <origin xyz="-0.0347225244939485 -0.0124937371226132 0.00230421142468828" rpy="0 0 0" />
+            <mass value="0.242325622607969" />
+            <inertia ixx="0.000143993389307771" ixy="-4.71254630905258E-05" ixz="-8.24594431646548E-05" iyy="0.000347052288199795" iyz="-2.48856865261844E-05" izz="0.00035601911255951" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R4_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R4_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R4_joint" type="revolute">
+        <origin xyz="-0.0294999999999995 0.00775000000000126 0.0818500000000005" rpy="1.57079632679492 1.37133227810459 -3.14159265358977" />
+        <parent link="R3_Link" />
+        <child link="R4_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="0.0174" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R5_Link">
+        <inertial>
+            <origin xyz="-0.0028215645593101 0.0153621837959566 -0.0430146596087045" rpy="0 0 0" />
+            <mass value="0.155938691268561" />
+            <inertia ixx="0.000328753810633662" ixy="6.37313816102706E-06" ixz="-1.56499789496403E-05" iyy="0.000295834736121655" iyz="8.67023307048034E-05" izz="8.97419310339825E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R5_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R5_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R5_joint" type="revolute">
+        <origin xyz="-0.0920710602715785 -0.011484370268659 -0.00824999999999898" rpy="-1.5707963267949 -0.175965359389049 -1.77026037548521" />
+        <parent link="R4_Link" />
+        <child link="R5_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R6_Link">
+        <inertial>
+            <origin xyz="-0.0302023430994559 -0.0048095690200628 -0.0239121256715552" rpy="0 0 0" />
+            <mass value="0.227233635909737" />
+            <inertia ixx="0.000155498286134359" ixy="1.05190757682819E-06" ixz="-9.68969427984403E-06" iyy="0.0001831240437216" iyz="-1.6232718228238E-06" izz="0.000220814928125286" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R6_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.898039215686275 0.917647058823529 0.929411764705882 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R6_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R6_joint" type="revolute">
+        <origin xyz="-0.00452001489370575 0.0254212876416742 -0.118453681718218" rpy="1.5707963267949 -1.19343079707769 -2.96562729420074" />
+        <parent link="R5_Link" />
+        <child link="R6_Link" />
+        <axis xyz="0 0 -1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="R7_Link">
+        <inertial>
+            <origin xyz="-4.09657494454541E-06 -4.82320554001658E-05 0.00716318398396043" rpy="0 0 0" />
+            <mass value="0.0300324441325877" />
+            <inertia ixx="5.62681231268383E-06" ixy="7.20227922686362E-09" ixz="4.76909125066214E-10" iyy="5.71069278505151E-06" iyz="5.61682744741326E-09" izz="1.02708087817867E-05" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R7_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.866666666666667 0.866666666666667 0.890196078431372 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/R7_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="R7_joint" type="revolute">
+        <origin xyz="-0.0318714873450072 -0.0445788770640032 -0.0253216918888982" rpy="1.5707963267949 1.48578825159432 0.252653002267418" />
+        <parent link="R6_Link" />
+        <child link="R7_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.87" upper="2.87" effort="10000" velocity="2.61" />
+    </joint>
+    <link name="base_link">
+        <inertial>
+            <origin xyz="-0.0411132579557425 -0.0398089546394619 0.0753558147218375" rpy="0 0 0" />
+            <mass value="2.88524669227858" />
+            <inertia ixx="0.0105750106556211" ixy="5.3072425861377E-06" ixz="-5.60704160888348E-06" iyy="0.0103437500248178" iyz="-2.93480011706721E-05" izz="0.00878924737391567" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/base_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/base_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <link name="body_Link">
+        <inertial>
+            <origin xyz="9.91488786405981E-07 0.00253100788040161 0.0941830586487621" rpy="0 0 0" />
+            <mass value="1.84312182388031" />
+            <inertia ixx="0.0130956210491572" ixy="-1.39909954430406E-08" ixz="7.23906800833492E-07" iyy="0.0162455404576463" iyz="-0.000435923010998199" izz="0.0067950353046656" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/body_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/body_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="body" type="revolute">
+        <origin xyz="-0.0411232379784645 -0.0411232379784645 0.1567" rpy="0 0 3.14159265358979" />
+        <parent link="base_link" />
+        <child link="body_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-2.79" upper="2.79" effort="10000" velocity="1.13" />
+    </joint>
+    <link name="head_Link">
+        <inertial>
+            <origin xyz="-0.0220580255890569 -0.000192864569992811 -0.100829902900497" rpy="0 0 0" />
+            <mass value="1.19614017700233" />
+            <inertia ixx="0.00723363611109726" ixy="-3.53780631010877E-06" ixz="0.000252103319902238" iyy="0.00246687125613415" iyz="-5.67297777672918E-07" izz="0.00530282008059104" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/head_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/head_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="head" type="revolute">
+        <origin xyz="0 0 0.234300000000004" rpy="-3.14159265358979 0 -1.5707963267949" />
+        <parent link="body_Link" />
+        <child link="head_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-1.22" upper="3.83" effort="10000" velocity="1.13" />
+    </joint>
+    <link name="camera_Link">
+        <inertial>
+            <origin xyz="0.00155122707832717 5.60798769083659E-06 -0.0381591877489324" rpy="0 0 0" />
+            <mass value="0.0215402832809272" />
+            <inertia ixx="1.30475623020048E-05" ixy="2.80452692178173E-08" ixz="-4.28742321805765E-08" iyy="1.25243065405088E-05" iyz="9.14999025419855E-09" izz="1.19498914995732E-06" />
+        </inertial>
+        <visual>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/camera_Link.STL" />
+            </geometry>
+            <material name="">
+                <color rgba="1 1 1 1" />
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0 0 0" rpy="0 0 0" />
+            <geometry>
+                <mesh filename="package://mercury_description/urdf/mercury_b1/meshes/camera_Link.STL" />
+            </geometry>
+        </collision>
+    </link>
+    <joint name="camera" type="revolute">
+        <origin xyz="-0.0388569238285446 -0.0372589398101035 -0.0260001449065854" rpy="-1.57079632679487 0.130499600987671 3.14159265358979" />
+        <parent link="head_Link" />
+        <child link="camera_Link" />
+        <axis xyz="0 0 1" />
+        <limit lower="-0.95" upper="0" effort="10000" velocity="1.13" />
+    </joint>
+    <transmission name="trans_L1_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L1_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L1_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L2_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L2_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L2_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L3_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L3_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L3_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L4_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L4_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L4_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L5_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L5_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L5_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L6_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L6_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L6_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_L7_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="L7_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="L7_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R1_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R1_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R1_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R2_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R2_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R2_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R3_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R3_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R3_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R4_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R4_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R4_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R5_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R5_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R5_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R6_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R6_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R6_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_R7_joint">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="R7_joint">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="R7_joint_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_body">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="body">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="body_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_head">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="head">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="head_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <transmission name="trans_camera">
+        <type>transmission_interface/SimpleTransmission</type>
+        <joint name="camera">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+        </joint>
+        <actuator name="camera_motor">
+            <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+            <mechanicalReduction>1</mechanicalReduction>
+        </actuator>
+    </transmission>
+    <gazebo>
+        <plugin name="gazebo_ros_control">
+            <robotNamespace>/</robotNamespace>
+        </plugin>
+    </gazebo>
+</robot>
+

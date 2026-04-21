@@ -28,15 +28,16 @@ def callback(data):
     left_arm = data_list[:7]
     right_arm = data_list[7:-3]
     middle_arm = data_list[-3:]
-    print('left_angles: {}'.format(left_arm))
-    print('right_angles: {}'.format(right_arm))
-    print('middle_angles: {}'.format(middle_arm))
+    
+    left_arm[5] = left_arm[5] + 90
+    right_arm[5] = right_arm[5] + 90
 
+    print('left_angles: {}, right_angles: {}, middle_angles: {}'.format(left_arm, right_arm, middle_arm))
     l.send_angles(left_arm, 16, _async=True)
     r.send_angles(right_arm, 16, _async=True)
-    r.send_angle(11, middle_arm[0], 16, _async=True)
+    r.send_angle(11, middle_arm[2], 16, _async=True)
     r.send_angle(12, middle_arm[1], 16, _async=True)
-    r.send_angle(13, middle_arm[2], 16, _async=True)
+    r.send_angle(13, middle_arm[0], 16, _async=True)
 
 
 def listener():

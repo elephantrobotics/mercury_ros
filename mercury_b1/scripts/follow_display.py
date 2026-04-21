@@ -44,31 +44,27 @@ def talker():
     joint_state_send.header = Header()
 
     joint_state_send.name = [
-        "joint1_L",
-        "joint2_L",
-        "joint3_L",
-        "joint4_L",
-        "joint5_L",
-        "joint6_L",
-        "joint7_L",
-        "joint1_R",
-        "joint2_R",
-        "joint3_R",
-        "joint4_R",
-        "joint5_R",
-        "joint6_R",
-        "joint7_R",
-        "eye",
-        "head",
+        "L1_joint",
+        "L2_joint",
+        "L3_joint",
+        "L4_joint",
+        "L5_joint",
+        "L6_joint",
+        "L7_joint",
+        "R1_joint",
+        "R2_joint",
+        "R3_joint",
+        "R4_joint",
+        "R5_joint",
+        "R6_joint",
+        "R7_joint",
         "body",
+        "head",
+        "camera",
     ]
     
     joint_state_send.velocity = [0]
     joint_state_send.effort = []
-
-    marker_ = Marker()
-    marker_.header.frame_id = "/base"
-    marker_.ns = "my_namespace"
 
     print("publishing ...")
     while not rospy.is_shutdown():
@@ -80,13 +76,16 @@ def talker():
             head_angle = r.get_angle(12)
             body_angle = r.get_angle(13)
             
+            left_angles[5] -= 90
+            right_angles[5] -= 90
+            
             print('left: {}'.format(left_angles))
             print('right: {}'.format(right_angles))
-            print('eye: {}'.format(eye_angle))
-            print('head: {}'.format(head_angle))
             print('body: {}'.format(body_angle))
+            print('head: {}'.format(head_angle))
+            print('camera: {}'.format(eye_angle))
             
-            all_angles = left_angles + right_angles + [eye_angle] + [head_angle] + [body_angle]
+            all_angles = left_angles + right_angles + [body_angle] + [head_angle] + [eye_angle]
             data_list = []
             for index, value in enumerate(all_angles):
                 radians = math.radians(value)
@@ -96,46 +95,6 @@ def talker():
             joint_state_send.position = data_list
 
             pub.publish(joint_state_send)
-
-            left_coords = l.get_coords()
-            
-            right_coords = r.get_coords()
-            
-            eye_coords = [r.get_angle(11)]
-            
-            head_coords = [r.get_angle(12)]
-            
-            body_coords = [r.get_angle(13)]
-            
-            # marker
-            marker_.header.stamp = rospy.Time.now()
-            marker_.type = marker_.SPHERE
-            marker_.action = marker_.ADD
-            marker_.scale.x = 0.04
-            marker_.scale.y = 0.04
-            marker_.scale.z = 0.04
-
-            # marker position initial.标记位置初始
-            # print(coords)
-            if not left_coords:
-                left_coords = [0, 0, 0, 0, 0, 0]
-                rospy.loginfo("error [101]: can not get coord values")
-
-            marker_.pose.position.x = left_coords[1] / 1000 * -1
-            marker_.pose.position.y = left_coords[0] / 1000
-            marker_.pose.position.z = left_coords[2] / 1000
-
-            marker_.pose.position.x = right_coords[1] / 1000 * -1
-            marker_.pose.position.y = right_coords[0] / 1000
-            marker_.pose.position.z = right_coords[2] / 1000
-            
-            marker_.pose.position.x = eye_coords[0] / 1000 * -1
-            marker_.pose.position.x = head_coords[0] / 1000 * -1
-            marker_.pose.position.x = body_coords[0] / 1000 * -1
-
-            marker_.color.a = 1.0
-            marker_.color.g = 1.0
-            pub_marker.publish(marker_)
 
             rate.sleep()
         except Exception as e:

@@ -1,14 +1,13 @@
 Panels:
   - Class: rviz/Displays
-    Help Height: 70
+    Help Height: 84
     Name: Displays
     Property Tree Widget:
       Expanded:
         - /MotionPlanning1
-        - /MotionPlanning1/Planning Request1
         - /MotionPlanning1/Planned Path1
       Splitter Ratio: 0.5
-    Tree Height: 70
+    Tree Height: 172
   - Class: rviz/Help
     Name: Help
   - Class: rviz/Views
@@ -71,93 +70,97 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
+          L1_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L2_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L3_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L4_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L5_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L6_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L7_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           Link Tree Style: Links in Alphabetic Order
-          base:
+          R1_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link1_L:
+          R2_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link1_R:
+          R3_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link2_L:
+          R4_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link2_R:
+          R5_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link3_L:
+          R6_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link3_R:
+          R7_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link4_L:
+          base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link4_R:
+          body_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link5_L:
+          camera_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link5_R:
+          dummy_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: true
-          link6_L:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link6_R:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link7_L:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link7_R:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_body:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_eye:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_head:
+          head_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -207,93 +210,97 @@ Visualization Manager:
           Expand Joint Details: false
           Expand Link Details: false
           Expand Tree: false
+          L1_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L2_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L3_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L4_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L5_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L6_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
+          L7_Link:
+            Alpha: 1
+            Show Axes: false
+            Show Trail: false
+            Value: true
           Link Tree Style: Links in Alphabetic Order
-          base:
+          R1_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link1_L:
+          R2_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link1_R:
+          R3_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link2_L:
+          R4_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link2_R:
+          R5_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link3_L:
+          R6_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link3_R:
+          R7_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link4_L:
+          base_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link4_R:
+          body_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link5_L:
+          camera_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
             Value: true
-          link5_R:
+          dummy_link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
-            Value: true
-          link6_L:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link6_R:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link7_L:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link7_R:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_body:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_eye:
-            Alpha: 1
-            Show Axes: false
-            Show Trail: false
-            Value: true
-          link_head:
+          head_Link:
             Alpha: 1
             Show Axes: false
             Show Trail: false
@@ -307,7 +314,7 @@ Visualization Manager:
   Global Options:
     Background Color: 48; 48; 48
     Default Light: true
-    Fixed Frame: base
+    Fixed Frame: dummy_link
     Frame Rate: 30
   Name: root
   Tools:
@@ -319,7 +326,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 1.7599999904632568
+      Distance: 2.240000009536743
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -327,22 +334,22 @@ Visualization Manager:
         Value: false
       Field of View: 0.75
       Focal Point:
-        X: -0.10000000149011612
-        Y: 0.25
-        Z: 0.30000001192092896
+        X: 0.19451142847537994
+        Y: 0.10816266387701035
+        Z: 0.21479561924934387
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.18999998271465302
-      Target Frame: base
-      Yaw: 5.699948310852051
+      Pitch: 0.38499999046325684
+      Target Frame: dummy_link
+      Yaw: 4.144949913024902
     Saved: ~
 Window Geometry:
   Displays:
     collapsed: false
-  Height: 749
+  Height: 888
   Help:
     collapsed: false
   Hide Left Dock: false
@@ -351,9 +358,9 @@ Window Geometry:
     collapsed: false
   MotionPlanning - Trajectory Slider:
     collapsed: false
-  QMainWindow State: 000000ff00000000fd0000000100000000000001f300000293fc0200000007fb000000100044006900730070006c006100790073010000003d000000c9000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c0069006400650072010000010c000000410000004100fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001530000017d0000017d00ffffff000003710000029300000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
+  QMainWindow State: 000000ff00000000fd0000000100000000000001f30000031efc0200000007fb000000100044006900730070006c006100790073010000003d0000013d000000c900fffffffb0000000800480065006c00700000000342000000bb0000006e00fffffffb0000000a00560069006500770073000000010c000000a4000000a400fffffffb0000000c00430061006d00650072006100000002ff000001610000000000000000fb0000001e004d006f00740069006f006e00200050006c0061006e006e0069006e00670100000374000001890000000000000000fb00000044004d006f00740069006f006e0050006c0061006e006e0069006e00670020002d0020005400720061006a006500630074006f0072007900200053006c00690064006500720100000180000000410000004100fffffffb0000001c004d006f00740069006f006e0050006c0061006e006e0069006e006701000001c7000001940000017d00ffffff0000052d0000031e00000001000000020000000100000002fc0000000100000002000000010000000a0054006f006f006c00730100000000ffffffff0000000000000000
   Views:
     collapsed: false
-  Width: 1386
-  X: 407
-  Y: 63
+  Width: 1830
+  X: 72
+  Y: 27

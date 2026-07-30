@@ -170,12 +170,12 @@ Mercury Status
 --------------------------------
 Joint Limit:
     joint 1: -165 ~ +165
-    joint 2: -100 ~ +100
+    joint 2: -50 ~ +120
     joint 3: -165 ~ +165
-    joint 4: -175 ~ +4
+    joint 4: -165 ~ +5
     joint 5: -165 ~ +165
-    joint 6: -1 ~ +180
-    joint 7: -165 ~ +165
+    joint 6: -20 ~ +265
+    joint 7: -180 ~ +180
 
 Connect Status: %s
 

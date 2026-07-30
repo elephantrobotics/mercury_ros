@@ -194,5 +194,5 @@ arm_group:
     - AITstar
     - ABITstar
     - BITstar
-  projection_evaluator: joints(joint1_to_base,joint2_to_joint1)
+  projection_evaluator: joints(joint1,joint2)
   longest_valid_segment_fraction: 0.005

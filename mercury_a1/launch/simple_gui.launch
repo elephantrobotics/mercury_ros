@@ -9,6 +9,11 @@
 
 	<param name="robot_description" command="$(find xacro)/xacro --inorder $(arg model)" />
 
+	<!-- Publish joint states without GUI -->
+    <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+        <rosparam param="zeros"> {joint6: 1.5708} </rosparam>
+    </node>
+
 	<!-- Combinejoin values to TF ,将值合并到TF-->
 	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" />
 	<!-- Show in Rviz ，显示在Rviz-->

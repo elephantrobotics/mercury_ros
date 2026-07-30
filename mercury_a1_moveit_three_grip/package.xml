@@ -3,16 +3,16 @@
   <name>mercury_a1_moveit_three_grip</name>
   <version>0.3.0</version>
   <description>
-     An automatically generated package with all the configuration and launch files for using the firefighter with the MoveIt Motion Planning Framework
+     An automatically generated package with all the configuration and launch files for using the mercury_a1 with the MoveIt Motion Planning Framework
   </description>
-  <author email="lijun.zhang@elephantrobotics.com">zachary</author>
-  <maintainer email="lijun.zhang@elephantrobotics.com">zachary</maintainer>
+  <author email="weijian.wang@elephantrobotics.com">wangweijian</author>
+  <maintainer email="weijian.wang@elephantrobotics.com">wangweijian</maintainer>
 
   <license>BSD</license>
 
   <url type="website">http://moveit.ros.org/</url>
-  <url type="bugtracker">https://github.com/ros-planning/moveit/issues</url>
-  <url type="repository">https://github.com/ros-planning/moveit</url>
+  <url type="bugtracker">https://github.com/moveit/moveit/issues</url>
+  <url type="repository">https://github.com/moveit/moveit</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
